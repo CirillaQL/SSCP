@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgba(205,205,205,0.5);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LoginController">
+   <children>
+      <AnchorPane prefHeight="115.0" prefWidth="600.0" style="-fx-background-color: rgba(34,166,242,0.7);">
+         <children>
+            <ImageView fx:id="image" fitHeight="115.0" fitWidth="100.0" layoutX="82.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/coconut-drink-icon.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <Button fx:id="confirm" layoutX="87.0" layoutY="298.0" mnemonicParsing="false" onAction="#print" prefHeight="35.0" prefWidth="100.0" stylesheets="@../resource/button.css" text="确定" wrapText="true">
+         <font>
+            <Font name="Microsoft YaHei" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="quit" layoutX="437.0" layoutY="298.0" mnemonicParsing="false" onAction="#Quit" prefHeight="35.0" prefWidth="100.0" stylesheets="@../resource/button.css" text="退出">
+         <font>
+            <Font name="Microsoft YaHei" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="128.0" layoutY="169.0" text="用户名" />
+      <TextField fx:id="username" layoutX="206.0" layoutY="163.0" prefHeight="33.0" prefWidth="255.0" />
+      <Label layoutX="137.0" layoutY="223.0" text="密码" />
+      <PasswordField fx:id="password" layoutX="206.0" layoutY="217.0" prefHeight="33.0" prefWidth="255.0" />
+   </children>
+</AnchorPane>

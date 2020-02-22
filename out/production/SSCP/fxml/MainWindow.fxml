@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="120.0" style="-fx-background-color: rgba(0,120,215,0.8);">
+         <children>
+            <ImageView fx:id="image" fitHeight="64.0" fitWidth="68.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../resource/martini-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="100.0" prefHeight="500.0" prefWidth="120.0" style="-fx-background-color: rgba(61,179,122);" />
+      <TableView fx:id="roomtable" layoutX="500.0" layoutY="100.0" prefHeight="400.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="房间号" />
+          <TableColumn fx:id="typeColumn" prefWidth="75.0" text="房间类型" />
+          <TableColumn fx:id="sizeColumn" prefWidth="75.0" text="房间大小" />
+            <TableColumn fx:id="stateColumn" prefWidth="75.0" text="房间状态" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="120.0" layoutY="500.0" prefHeight="100.0" prefWidth="680.0" style="-fx-background-color: rgba(0,152,158,1);">
+         <children>
+            <Button fx:id="addOrder" layoutX="37.0" layoutY="34.0" mnemonicParsing="false" onAction="#addOrder" stylesheets="@../resource/button.css" text="增加住客">
+               <font>
+                  <Font name="SimHei" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="527.0" layoutY="37.0" mnemonicParsing="false" onAction="#getRoominfomation" stylesheets="@../resource/button.css" text="刷新房间信息">
+                <font>
+                    <Font name="SimHei" size="17.0" />
+                </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="120.0" prefHeight="100.0" prefWidth="680.0" style="-fx-background-color: rgba(0,120,215,0.8);" />
+      <TextArea layoutX="120.0" layoutY="100.0" prefHeight="400.0" prefWidth="380.0" />
+   </children>
+</AnchorPane>
