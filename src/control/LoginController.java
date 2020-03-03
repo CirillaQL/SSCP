@@ -34,7 +34,7 @@ public class LoginController {
     //检查是否能登录
     protected boolean ifgetConnection(){
         String driverClass = "oracle.jdbc.driver.OracleDriver";
-        String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+        String url = "jdbc:oracle:thin:@localhost:1521:XE";
         Connection connection;
         try {
             Class.forName(driverClass);
@@ -81,6 +81,7 @@ public class LoginController {
         }
     }
 
+    //关闭当前窗口
     public void exitButtonOnMouseClicked() {
         //通过stage方式操作窗口，因为一个新的窗口就是一个新的stage
         Stage stage = (Stage)quit.getScene().getWindow();

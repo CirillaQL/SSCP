@@ -15,7 +15,6 @@
     <root id="root">
       <element id="archive" name="SSCP.jar">
         <element id="module-output" name="SSCP" />
-        <element id="library" level="project" name="ojdbc" />
       </element>
     </root>
   </artifact>

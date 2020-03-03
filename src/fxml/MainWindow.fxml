@@ -33,14 +33,19 @@
                   <Font name="SimHei" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="527.0" layoutY="37.0" mnemonicParsing="false" onAction="#getRoominfomation" stylesheets="@../resource/button.css" text="刷新房间信息">
+            <Button layoutX="525.0" layoutY="34.0" mnemonicParsing="false" onAction="#getRoominfomation" stylesheets="@../resource/button.css" text="刷新房间信息">
                 <font>
                     <Font name="SimHei" size="17.0" />
                 </font>
             </Button>
+            <Button layoutX="173.0" layoutY="33.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="Button" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="120.0" prefHeight="100.0" prefWidth="680.0" style="-fx-background-color: rgba(0,120,215,0.8);" />
-      <TextArea layoutX="120.0" layoutY="100.0" prefHeight="400.0" prefWidth="380.0" />
+      <ImageView fitHeight="400.0" fitWidth="382.0" layoutX="120.0" layoutY="100.0" pickOnBounds="true">
+         <image>
+            <Image url="@../resource/123.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

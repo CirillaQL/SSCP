@@ -1,20 +1,13 @@
 package control;
 
-import javafx.collections.FXCollections;
-import javafx.collections.*;
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-
-import javax.swing.plaf.nimbus.State;
+import javafx.stage.Stage;
 import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.*;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 
 public class OrderController {
     @FXML
@@ -31,6 +24,8 @@ public class OrderController {
     private TextField VIP_id;
     @FXML
     private TextField price;
+    @FXML
+    private Button quit;
 
     //SQL信息
     private String SQL_username;
@@ -61,7 +56,7 @@ public class OrderController {
     //创建连接
     public void getConnection(String _name, String _pwd){
         String driverClass = "oracle.jdbc.driver.OracleDriver";
-        String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+        String url = "jdbc:oracle:thin:@localhost:1521:XE";
         try {
             Class.forName(driverClass);
             connection = DriverManager.getConnection(url,_name, _pwd);
@@ -79,9 +74,9 @@ public class OrderController {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        assert time != null;
         long t = time.getTime();
-        Date sqlDate = new Date(t);
-        return sqlDate;
+        return new Date(t);
     }
 
     //生成订单id
@@ -146,16 +141,25 @@ public class OrderController {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if (k!=0)
-            return true;
-        else
-            return false;
+        return k != 0;
     }
 
+    //确定按钮动作
     public void addOrder(){
         create_Order();
-        print_date();
-        System.out.println(push_to_Database());
+        push_to_Database();
+    }
+
+    //关闭当前窗口
+    public void exitButtonOnMouseClicked() {
+        //通过stage方式操作窗口，因为一个新的窗口就是一个新的stage
+        Stage stage = (Stage)quit.getScene().getWindow();
+        stage.close();
+    }
+
+    //退出按钮动作
+    public void Quit(){
+        exitButtonOnMouseClicked();
     }
 
 }

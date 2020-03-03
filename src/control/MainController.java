@@ -52,7 +52,7 @@ public class MainController {
     //获取房间信息
     public void getRoominfomation(){
         String driverClass = "oracle.jdbc.driver.OracleDriver";
-        String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+        String url = "jdbc:oracle:thin:@localhost:1521:XE";
         try {
             Class.forName(driverClass);
             con = DriverManager.getConnection(url,SQL_username,SQL_password);
