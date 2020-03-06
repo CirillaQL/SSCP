@@ -53,6 +53,7 @@ public class MainController {
     public void getRoominfomation(){
         String driverClass = "oracle.jdbc.driver.OracleDriver";
         String url = "jdbc:oracle:thin:@localhost:1521:XE";
+        roomtable.getItems().clear();
         try {
             Class.forName(driverClass);
             con = DriverManager.getConnection(url,SQL_username,SQL_password);
@@ -80,6 +81,21 @@ public class MainController {
         stage.setScene(new Scene(root));
         stage.getIcons().add(new Image(Main.class.getResourceAsStream("/resource/coffee.png")));
         stage.setTitle("增加订单");
+        stage.show();
+    }
+
+    //删除订单事件
+    public void DeleteOrder() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/DeleteOrder.fxml"));
+        Parent root = (Parent)loader.load();
+        DeleteOrderController controller = loader.getController();
+        controller.getUserAndPwd(SQL_username,SQL_password);
+        controller.getConnection(SQL_username,SQL_password);
+        controller.getOrderIdList();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/resource/coffee.png")));
+        stage.setTitle("删除订单");
         stage.show();
     }
 }

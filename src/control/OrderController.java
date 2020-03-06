@@ -119,7 +119,8 @@ public class OrderController {
     }
 
     //提交到数据库
-    private boolean push_to_Database(){
+    private boolean push_to_Database() throws SQLException {
+        connection.setAutoCommit(false);
         int k=0;
         try{
             String sql = "insert into Hotel_manager.book_order (order_id, employee_name, cus_name, cus_phone_number, room_number, create_time, book_time_begin, book_time_end, vip_id, origin_price, actuall_price) values (?,?,?,?,?,?,?,?,?,?,?)";
@@ -145,9 +146,15 @@ public class OrderController {
     }
 
     //确定按钮动作
-    public void addOrder(){
+    public void addOrder() throws SQLException {
         create_Order();
         push_to_Database();
+        //将表格房间状态修改
+        connection.setAutoCommit(false);
+        String sql = "update Hotel_manager.room set current_state = 'Full' where room_number = "+"'"+room_number+"'";
+        Statement pst = connection.prepareStatement(sql);
+        pst.executeUpdate(sql);
+        connection.commit();
     }
 
     //关闭当前窗口

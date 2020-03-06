@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.DeleteOrderController">
+   <children>
+      <Label layoutX="186.0" layoutY="95.0" text="输入需要删除订单的订单号">
+         <font>
+            <Font name=".PingFang SC Regular" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="getid" layoutX="228.0" layoutY="180.0" />
+      <Button layoutX="414.0" layoutY="284.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="100.0" stylesheets="@../resource/button.css" text="退出" >
+         <font>
+            <Font name=".PingFang TC Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="ok" layoutX="86.0" layoutY="284.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="100.0" stylesheets="@../resource/button.css" text="确定" onAction="#deleteOrder">
+         <font>
+            <Font name=".PingFang TC Regular" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
