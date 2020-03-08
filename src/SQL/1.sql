@@ -1,7 +1,7 @@
 /*创建表空间*/
 CREATE TABLESPACE Hotel
          LOGGING
-         DATAFILE '/home/oracle/tablespace/Hotel.DBF'
+         DATAFILE '/u01/app/oracle/oradata/XE/Hotel.DBF'
          SIZE 500M
          AUTOEXTEND ON
          NEXT 32M MAXSIZE UNLIMITED
@@ -13,7 +13,7 @@ create role The_manager;
 grant connect,resource,dba to The_manager;
 
 --创建默认经理用户
-create user hotel_manager identified by 123456 default tablespace TheHotel;
+create user hotel_manager identified by 123456 default tablespace Hotel;
 --将经理角色赋给该用户
 grant The_manager to hotel_manager;
 

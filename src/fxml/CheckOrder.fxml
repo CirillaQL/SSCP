@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #81D4FA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CheckOrderController">
+   <children>
+      <AnchorPane layoutX="47.0" layoutY="50.0" prefHeight="300.0" prefWidth="187.0" style="-fx-background-color: #2AD537;">
+         <children>
+            <Label layoutX="61.0" layoutY="20.0" text="订单号">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="22.0" />
+               </font></Label>
+            <TextField fx:id="getorder" layoutX="14.0" layoutY="60.0" prefHeight="24.0" prefWidth="159.0" />
+            <Button layoutX="54.0" layoutY="157.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="80.0" stylesheets="@../resource/button.css" text="确定" onAction="#getOrderId">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="quit" layoutX="58.0" layoutY="226.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="72.0" stylesheets="@../resource/button.css" text="推出">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="271.0" layoutY="50.0" prefHeight="300.0" prefWidth="286.0" style="-fx-background-color: #BA68C8;">
+         <children>
+            <TextField fx:id="name" layoutX="88.0" layoutY="20.0" prefHeight="24.0" prefWidth="170.0" />
+            <Label layoutX="35.0" layoutY="21.0" text="姓名">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="81.0" text="电话">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phone" layoutX="88.0" layoutY="78.0" prefHeight="24.0" prefWidth="170.0" />
+            <Label layoutX="35.0" layoutY="141.0" text="房间">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="room" layoutX="88.0" layoutY="139.0" prefHeight="24.0" prefWidth="170.0" />
+            <Label layoutX="40.0" layoutY="200.0" text="VIP">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="vip" layoutX="88.0" layoutY="199.0" prefHeight="24.0" prefWidth="170.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

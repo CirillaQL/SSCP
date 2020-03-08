@@ -84,4 +84,10 @@ public class DeleteOrderController {
         stage.close();
     }
 
+    //退出按钮
+    public void quit(){
+        Stage stage = (Stage)ok.getScene().getWindow();
+        stage.close();
+    }
+
 }

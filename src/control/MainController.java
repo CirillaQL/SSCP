@@ -32,7 +32,6 @@ public class MainController {
 
     private String SQL_username;
     private String SQL_password;
-    private Connection con;
 
     //获取用户名和密码
     public void getUserAndPwd(String name, String pwd)  {
@@ -56,7 +55,7 @@ public class MainController {
         roomtable.getItems().clear();
         try {
             Class.forName(driverClass);
-            con = DriverManager.getConnection(url,SQL_username,SQL_password);
+            Connection con = DriverManager.getConnection(url, SQL_username, SQL_password);
             String sql = "select ROOM_NUMBER,ROOM_TYPE,ROOM_SIZE,CURRENT_STATE from Hotel_Manager.ROOM";
             PreparedStatement pstm = con.prepareStatement(sql);
             ResultSet rs = pstm.executeQuery();
@@ -73,8 +72,9 @@ public class MainController {
     //创建订单
     public void addOrder() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Order.fxml"));
-        Parent root = (Parent)loader.load();
-        OrderController controller = loader.getController();
+        Parent root = loader.load();
+        OrderController controller;
+        controller = loader.getController();
         controller.getUserAndPwd(SQL_username,SQL_password);
         controller.getConnection(SQL_username,SQL_password);
         Stage stage = new Stage();
@@ -87,7 +87,7 @@ public class MainController {
     //删除订单事件
     public void DeleteOrder() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/DeleteOrder.fxml"));
-        Parent root = (Parent)loader.load();
+        Parent root = loader.load();
         DeleteOrderController controller = loader.getController();
         controller.getUserAndPwd(SQL_username,SQL_password);
         controller.getConnection(SQL_username,SQL_password);
@@ -96,6 +96,20 @@ public class MainController {
         stage.setScene(new Scene(root));
         stage.getIcons().add(new Image(Main.class.getResourceAsStream("/resource/coffee.png")));
         stage.setTitle("删除订单");
+        stage.show();
+    }
+
+    //查看订单信息
+    public void CheckOrder() throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CheckOrder.fxml"));
+        Parent root = loader.load();
+        CheckOrderController controller = loader.getController();
+        controller.getUserAndPwd(SQL_username,SQL_password);
+        controller.getConnection(SQL_username,SQL_password);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/resource/coffee.png")));
+        stage.setTitle("查看订单");
         stage.show();
     }
 }

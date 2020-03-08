@@ -29,9 +29,9 @@
                         <TableColumn fx:id="stateColumn" prefWidth="75.0" text="房间状态" />
                     </columns>
                   </TableView>
-                  <Label layoutX="93.0" layoutY="8.0" text="酒店房间状况">
+                  <Label layoutX="93.0" layoutY="10.0" text="酒店房间状况">
                      <font>
-                        <Font name=".PingFang SC Medium" size="19.0" />
+                        <Font name="Ubuntu Mono Bold" size="19.0" />
                      </font>
                   </Label>
                </children>
@@ -51,7 +51,7 @@
                   <Font name=".PingFang SC Regular" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="164.0" layoutY="22.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="查看订单">
+            <Button layoutX="164.0" layoutY="22.0" mnemonicParsing="false" onAction="#CheckOrder" stylesheets="@../resource/button.css" text="查看订单">
                <font>
                   <Font name=".PingFang SC Regular" size="17.0" />
                </font>
@@ -61,9 +61,19 @@
                   <Font name=".PingFang SC Regular" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="164.0" layoutY="95.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="删除订单" onAction="#DeleteOrder">
+            <Button layoutX="164.0" layoutY="95.0" mnemonicParsing="false" onAction="#DeleteOrder" stylesheets="@../resource/button.css" text="删除订单">
                <font>
                   <Font name=".PingFang SC Regular" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="313.0" layoutY="22.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="确认入住">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="313.0" layoutY="95.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="确认离开">
+               <font>
+                  <Font size="17.0" />
                </font>
             </Button>
          </children>

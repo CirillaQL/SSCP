@@ -7,24 +7,27 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.DeleteOrderController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #66BB6A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.DeleteOrderController">
    <children>
-      <Label layoutX="186.0" layoutY="95.0" text="输入需要删除订单的订单号">
-         <font>
-            <Font name=".PingFang SC Regular" size="19.0" />
-         </font>
-      </Label>
-      <TextField fx:id="getid" layoutX="228.0" layoutY="180.0" />
-      <Button layoutX="414.0" layoutY="284.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="100.0" stylesheets="@../resource/button.css" text="退出" >
-         <font>
-            <Font name=".PingFang TC Regular" size="16.0" />
-         </font>
-      </Button>
-      <Button fx:id="ok" layoutX="86.0" layoutY="284.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="100.0" stylesheets="@../resource/button.css" text="确定" onAction="#deleteOrder">
-         <font>
-            <Font name=".PingFang TC Regular" size="16.0" />
-         </font>
-      </Button>
+      <AnchorPane layoutX="31.0" layoutY="28.0" prefHeight="336.0" prefWidth="540.0" style="-fx-background-color: #7E57C2;">
+         <children>
+            <TextField fx:id="getid" layoutX="111.0" layoutY="184.0" prefHeight="24.0" prefWidth="319.0" />
+            <Label layoutX="157.0" layoutY="102.0" text="输入需要删除订单的订单号" textFill="#eeeeee">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="19.0" />
+               </font>
+            </Label>
+            <Button layoutX="407.0" layoutY="259.0" mnemonicParsing="false" onAction="#quit" prefHeight="36.0" prefWidth="100.0" stylesheets="@../resource/button.css" text="退出">
+               <font>
+                  <Font name=".PingFang TC Regular" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="ok" layoutX="45.0" layoutY="259.0" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="36.0" prefWidth="100.0" stylesheets="@../resource/button.css" text="确定">
+               <font>
+                  <Font name=".PingFang TC Regular" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
