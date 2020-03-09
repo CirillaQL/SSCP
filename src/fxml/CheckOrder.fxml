@@ -21,7 +21,7 @@
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button fx:id="quit" layoutX="58.0" layoutY="226.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="72.0" stylesheets="@../resource/button.css" text="推出">
+            <Button fx:id="quit" layoutX="58.0" layoutY="226.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="72.0" stylesheets="@../resource/button.css" text="退出" onAction="#quit">
                <font>
                   <Font size="15.0" />
                </font>

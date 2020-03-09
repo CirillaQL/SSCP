@@ -112,4 +112,32 @@ public class MainController {
         stage.setTitle("查看订单");
         stage.show();
     }
+
+    //用户到达时登记
+    public void CheckIn() throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CheckInTime.fxml"));
+        Parent root = loader.load();
+        CheckInTimeController controller = loader.getController();
+        controller.getUserAndPwd(SQL_username,SQL_password);
+        controller.getConnection(SQL_username,SQL_password);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/resource/coffee.png")));
+        stage.setTitle("到达时间确认");
+        stage.show();
+    }
+
+    //用户离开时登记
+    public void CheckOut() throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CheckOutTime.fxml"));
+        Parent root = loader.load();
+        CheckOutTimeController controller = loader.getController();
+        controller.getUserAndPwd(SQL_username,SQL_password);
+        controller.getConnection(SQL_username,SQL_password);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/resource/coffee.png")));
+        stage.setTitle("离开时间确认");
+        stage.show();
+    }
 }

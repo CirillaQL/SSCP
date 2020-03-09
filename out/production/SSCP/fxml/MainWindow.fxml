@@ -66,12 +66,12 @@
                   <Font name=".PingFang SC Regular" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="313.0" layoutY="22.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="确认入住">
+            <Button layoutX="313.0" layoutY="22.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="确认入住" onAction="#CheckIn">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button layoutX="313.0" layoutY="95.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="确认离开">
+            <Button layoutX="313.0" layoutY="95.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="确认离开" onAction="#CheckOut">
                <font>
                   <Font size="17.0" />
                </font>
