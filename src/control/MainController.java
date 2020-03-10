@@ -155,4 +155,18 @@ public class MainController {
         stage.setTitle("修改订单");
         stage.show();
     }
+
+    //创建VIP
+    public void CreateVIP() throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CreateVIP.fxml"));
+        Parent root = loader.load();
+        CreateVIPController controller = loader.getController();
+        controller.getUserAndPwd(SQL_username,SQL_password);
+        controller.getConnection(SQL_username,SQL_password);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/resource/coffee.png")));
+        stage.setTitle("创建vip订单");
+        stage.show();
+    }
 }

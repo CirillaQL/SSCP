@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6D6D6D;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CreateVIPController">
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="23.0" prefHeight="255.0" prefWidth="553.0" style="-fx-background-color: #81D4FA;">
+         <children>
+            <Label layoutX="43.0" layoutY="40.0" prefHeight="30.0" prefWidth="43.0" text="姓名">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="101.0" layoutY="43.0" prefHeight="24.0" prefWidth="166.0" />
+            <Label layoutX="15.0" layoutY="98.0" prefHeight="30.0" prefWidth="71.0" text="电话号码">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phone" layoutX="101.0" layoutY="101.0" prefHeight="24.0" prefWidth="166.0" />
+            <Label layoutX="43.0" layoutY="154.0" prefHeight="30.0" prefWidth="43.0" text="倍率">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="blance" layoutX="101.0" layoutY="157.0" prefHeight="24.0" prefWidth="166.0" />
+            <Label layoutX="409.0" layoutY="35.0" prefHeight="30.0" prefWidth="43.0" text="VIPID">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="vipid" layoutX="338.0" layoutY="89.0" prefHeight="24.0" prefWidth="181.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="ok" layoutX="79.0" layoutY="330.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="86.0" stylesheets="@../resource/button.css" text="确定" onAction="#createvip">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="quit" layoutX="427.0" layoutY="330.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="86.0" stylesheets="@../resource/button.css" text="取消" onAction="#Quit">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

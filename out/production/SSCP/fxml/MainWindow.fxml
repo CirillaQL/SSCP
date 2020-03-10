@@ -36,7 +36,11 @@
                   </Label>
                </children>
             </AnchorPane>
-            <TextArea layoutX="30.0" layoutY="26.0" prefHeight="116.0" prefWidth="230.0" />
+            <ImageView fitHeight="290.0" fitWidth="230.0" layoutX="27.0" layoutY="26.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../resource/123.jpg" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="147.0" layoutY="412.0" prefHeight="159.0" prefWidth="625.0" style="-fx-background-color: #EFEDEF;">
@@ -56,7 +60,7 @@
                   <Font name=".PingFang SC Regular" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="35.0" layoutY="95.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="修改订单" onAction="#ChangeOrder">
+            <Button layoutX="35.0" layoutY="95.0" mnemonicParsing="false" onAction="#ChangeOrder" stylesheets="@../resource/button.css" text="修改订单">
                <font>
                   <Font name=".PingFang SC Regular" size="17.0" />
                </font>
@@ -66,12 +70,17 @@
                   <Font name=".PingFang SC Regular" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="313.0" layoutY="22.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="确认入住" onAction="#CheckIn">
+            <Button layoutX="313.0" layoutY="22.0" mnemonicParsing="false" onAction="#CheckIn" stylesheets="@../resource/button.css" text="确认入住">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button layoutX="313.0" layoutY="95.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="确认离开" onAction="#CheckOut">
+            <Button layoutX="313.0" layoutY="95.0" mnemonicParsing="false" onAction="#CheckOut" stylesheets="@../resource/button.css" text="确认离开">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="createVip" layoutX="496.0" layoutY="95.0" mnemonicParsing="false" prefWidth="92.0" stylesheets="@../resource/button.css" text="办理VIP" onAction="#CreateVIP">
                <font>
                   <Font size="17.0" />
                </font>

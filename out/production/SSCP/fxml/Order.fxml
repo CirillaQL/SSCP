@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -9,21 +10,65 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: rgba(190,184,254,0.5);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.OrderController">
    <children>
-      <Label layoutX="60.0" layoutY="75.0" prefHeight="19.0" prefWidth="34.0" text="姓名" />
-      <TextField fx:id="getName" layoutX="147.0" layoutY="70.0" />
-      <Label layoutX="60.0" layoutY="125.0" text="电话" />
-      <TextField fx:id="getNumber" layoutX="147.0" layoutY="120.0" />
-      <TextField fx:id="getRoomNum" layoutX="170.0" layoutY="170.0"/>
-      <Label layoutX="50.0" layoutY="175.0" text="房间号" />
-      <DatePicker fx:id="startDate" layoutX="139.0" layoutY="220.0" />
-      <Label layoutX="43.0" layoutY="226.0" text="开始入住" />
-      <Label layoutX="43.0" layoutY="275.0" text="结束入住" />
-      <DatePicker fx:id="endDate" layoutX="139.0" layoutY="270.0" />
-      <Label layoutX="63.0" layoutY="325.0" text="VIP" />
-      <TextField fx:id="VIP_id" layoutX="158.0" layoutY="319.0" />
-      <Label layoutX="60.0" layoutY="373.0" text="价格" />
-      <TextField fx:id="price" layoutX="158.0" layoutY="367.0" />
-      <Button fx:id="confirm" layoutX="60.0" layoutY="479.0" mnemonicParsing="false" text="确定" onAction="#addOrder"/>
-      <Button fx:id="quit" layoutX="281.0" layoutY="479.0" mnemonicParsing="false" text="取消" onAction="#Quit"/>
+      <AnchorPane layoutX="28.0" layoutY="453.0" prefHeight="117.0" prefWidth="343.0" style="-fx-background-color: #9CCC65;">
+         <children>
+            <Button fx:id="confirm" layoutX="26.0" layoutY="43.0" mnemonicParsing="false" onAction="#addOrder" prefHeight="31.0" prefWidth="78.0" stylesheets="@../resource/button.css" text="确定">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="quit" layoutX="241.0" layoutY="43.0" mnemonicParsing="false" onAction="#Quit" prefHeight="31.0" prefWidth="78.0" stylesheets="@../resource/button.css" text="取消">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="28.0" layoutY="20.0" prefHeight="404.0" prefWidth="343.0" style="-fx-background-color: #FB6847;">
+         <children>
+            <Label layoutX="57.0" layoutY="71.0" prefHeight="19.0" prefWidth="34.0" text="姓名">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="getName" layoutX="202.0" layoutY="69.0" />
+            <Label layoutX="55.0" layoutY="113.0" text="电话">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="getNumber" layoutX="202.0" layoutY="109.0" />
+            <TextField fx:id="getRoomNum" layoutX="202.0" layoutY="147.0" />
+            <Label layoutX="47.0" layoutY="150.0" text="房间号">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="startDate" layoutX="189.0" layoutY="190.0" />
+            <Label layoutX="39.0" layoutY="193.0" text="开始入住">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="239.0" text="结束入住">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="endDate" layoutX="189.0" layoutY="236.0" />
+            <Label layoutX="59.0" layoutY="282.0" text="VIP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="VIP_id" layoutX="202.0" layoutY="279.0" />
+            <Label layoutX="54.0" layoutY="326.0" text="价格">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="price" layoutX="202.0" layoutY="324.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

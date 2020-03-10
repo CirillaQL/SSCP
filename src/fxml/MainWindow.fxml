@@ -80,6 +80,11 @@
                   <Font size="17.0" />
                </font>
             </Button>
+            <Button fx:id="createVip" layoutX="496.0" layoutY="95.0" mnemonicParsing="false" prefWidth="92.0" stylesheets="@../resource/button.css" text="办理VIP" onAction="#CreateVIP">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>
