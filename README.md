@@ -6,4 +6,4 @@
 
 ![image](https://github.com/QianLu990613/SSCP/blob/master/2020-03-10%2017-19-56屏幕截图.png)
 
-![image]([https://github.com/QianLu990613/SSCP/blob/master/2020-03-10%2017-20-22屏幕截图.png)
+![image](https://github.com/QianLu990613/SSCP/blob/master/2020-03-10%2017-20-22屏幕截图.png)
