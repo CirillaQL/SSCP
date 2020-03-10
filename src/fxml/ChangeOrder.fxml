@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #7E57C2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ChangeOrderController">
+   <children>
+      <AnchorPane layoutX="28.0" layoutY="27.0" prefHeight="66.0" prefWidth="548.0" style="-fx-background-color: #EC407A;">
+         <children>
+            <Label layoutX="94.0" layoutY="23.0" text="订单号">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="order_id" layoutX="204.0" layoutY="21.0" prefHeight="24.0" prefWidth="239.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="28.0" layoutY="120.0" prefHeight="250.0" prefWidth="548.0" style="-fx-background-color: #26A69A;">
+         <children>
+            <TextField fx:id="name" layoutX="80.0" layoutY="17.0" prefHeight="24.0" prefWidth="122.0" />
+            <Label layoutX="27.0" layoutY="20.0" text="姓名">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="78.0" text="电话">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phone" layoutX="80.0" layoutY="76.0" prefHeight="24.0" prefWidth="122.0" />
+            <Label layoutX="27.0" layoutY="134.0" text="VIP">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="vip" layoutX="80.0" layoutY="132.0" prefHeight="24.0" prefWidth="122.0" />
+            <Label layoutX="24.0" layoutY="192.0" text="原价">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="price" layoutX="80.0" layoutY="190.0" prefHeight="24.0" prefWidth="122.0" />
+            <Label layoutX="316.0" layoutY="29.0" text="无更改内容则不填">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="ok" layoutX="274.0" layoutY="153.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="75.0" stylesheets="@../resource/button.css" text="确定" onAction="#ChangeOrder">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="quit" layoutX="448.0" layoutY="153.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="75.0" stylesheets="@../resource/button.css" text="退出">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -140,4 +140,19 @@ public class MainController {
         stage.setTitle("离开时间确认");
         stage.show();
     }
+
+    //修改订单
+    public void ChangeOrder() throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ChangeOrder.fxml"));
+        Parent root = loader.load();
+        ChangeOrderController controller = loader.getController();
+        controller.getUserAndPwd(SQL_username,SQL_password);
+        controller.getConnection(SQL_username,SQL_password);
+        controller.getOrderIdList();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/resource/coffee.png")));
+        stage.setTitle("修改订单");
+        stage.show();
+    }
 }

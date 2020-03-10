@@ -56,7 +56,7 @@
                   <Font name=".PingFang SC Regular" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="35.0" layoutY="95.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="修改订单">
+            <Button layoutX="35.0" layoutY="95.0" mnemonicParsing="false" stylesheets="@../resource/button.css" text="修改订单" onAction="#ChangeOrder">
                <font>
                   <Font name=".PingFang SC Regular" size="17.0" />
                </font>
