@@ -4,12 +4,6 @@
 
 本程序由Java语言完成，界面是JavaFx，数据库为Docker下的oracle-xe-11g
 
+![image](https://github.com/QianLu990613/SSCP/blob/master/2020-03-10%2017-19-56屏幕截图.png)
 
-
-![2020-03-10 17-19-56屏幕截图](/home/frankcox/SSCP/2020-03-10 17-19-56屏幕截图.png)
-
-
-
-
-
-![2020-03-10 17-20-22屏幕截图](/home/frankcox/SSCP/2020-03-10 17-20-22屏幕截图.png)
+![image]([https://github.com/QianLu990613/SSCP/blob/master/2020-03-10%2017-20-22屏幕截图.png)
